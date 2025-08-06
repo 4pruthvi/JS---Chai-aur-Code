@@ -8,12 +8,14 @@ console.log(3
 
 console.log("pruthvi")
 
-//Data Types
+//Data Types -> Primitive and Non-primitive
 
-let name = "Pruthvi sawant"
-let age = 22
-let isLoggedIn = false
+let name = "Pruthvi sawant" // string
+let age = 22 // int
+let price = 14.94 // float
+let isLoggedIn = false // boolen
 let state; //undefined as no value
+let emptyValue = null
 
 //number => 2 to power 53 (or bigint use for large numbers)
 //string => ""
@@ -22,13 +24,17 @@ let state; //undefined as no value
 //undefined => value is not assigned
 //symbol = to identify uniqueness {unique}
 
-//object
+//object -> non-primitive datatype (Array)
 
-console.log(typeof "pruthvi") //typeof tell us the DataType of the vale in it.
-console.log(typeof age)
+console.log(typeof "pruthvi") // type = string //typeof tell us the DataType of the vale in it.
+console.log(typeof age) // type = int
 
 console.log(typeof null) // type = object
 console.log(typeof undefined)// type = undefined
+
+//Array: ordered collection of values of specific data type of object
+
+let cars = ["mahindra","BMW","Ford"]
 
 
 
