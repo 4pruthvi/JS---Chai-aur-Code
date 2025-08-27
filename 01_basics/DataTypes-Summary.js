@@ -44,3 +44,29 @@ const myFunction = function() {
 console.log(typeof bigNumber); //typeof used to know datatype
 
 
+//******************************* Memory in js********************************
+
+// Stack (Primitive) , Heap (Non-Primitive)
+
+let myYoutubename = "kaypruthvi"
+
+let anothername = myYoutubename
+anothername = "keepgoingpruthvi"
+
+console.log(myYoutubename);
+console.log(anothername);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "pruithvi@google.com"  //we use . to access any thing in object
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
+
