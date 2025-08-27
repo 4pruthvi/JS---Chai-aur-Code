@@ -17,7 +17,7 @@ let userEmail;
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id === anotherId);
+console.log(id === anotherId); //to chaeck noth are same or not 
 
 const bigNumber = 490450584398469405n;
 
@@ -32,7 +32,7 @@ const bigNumber = 490450584398469405n;
 
 const heros = ["shaktiman","naagraj","krish"]  //array declartation
 
-let myObj = { //object deceleration
+let myObj = { //object deceleration  // values in curley brases is object 
     name: "pruthvi",
     age:20,
 }

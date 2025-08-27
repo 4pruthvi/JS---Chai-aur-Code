@@ -50,7 +50,7 @@ let str3 = str1 + str2
 
 // console.log("1" + 2); //12
 // console.log(1 + "2"); //12
-// console.log("1" + 2 + 2); //122 becaue string is present at 1st position so js treat all remainin no as strig hence o/p 122.
+// console.log("1" + 2 + 2); //122 becaue string is present at 1st position so js treat all remaining no as strig hence o/p 122.
 // console.log(1 + 2 + "2"); // 32 because number is present at 1st position so js adds that numbers and strig remains as it is.
 
 // console.log(3 + 5 * 9 % 2 ); //4 it is not used in real world like this. it is considered as bad practice.
