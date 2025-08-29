@@ -5,6 +5,7 @@ console.log(name.toUpperCase());
 
 //string concadination
 console.log(name + repoCount + ' Value');
+
 //string interpolation
 console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
 
@@ -37,8 +38,8 @@ console.log(newStirngOne.trim());
 const url = "https://pruthvi.com/pruthvi%30sawant"
 console.log(url.replace('%30','--'));
 console.log(url.replace('pruthvi','mahadev'));
-console.log(url.includes('rtam'));
+console.log(url.includes('pruthvi'));
 
-//create array form string using specific seperator
+//created array form string using specific seperator [split()]
 const nameThree = 'hitman-rohit-sharma';
 console.log(nameThree.split('-'));
