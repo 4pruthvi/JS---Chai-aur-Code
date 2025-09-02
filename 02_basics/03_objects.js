@@ -5,7 +5,7 @@
 
 // Object literals [no singelton]
 
-const mySym = Symbol('key1')
+const mySym = Symbol('key1')  //it is symbol decleration not object
 
 const JsUser = {
     name: 'PRUTHVI',
@@ -40,14 +40,14 @@ console.log(JsUser.email);
 //how to add functions in objects
 JsUser.greetings = function() {
     console.log('hello JS users');
-    
-    
+
+
 }
 
 console.log(JsUser.greetings());
 
-//how referece name from the object in function
-//when we have to reference the same object we will use this keyword and use dot with it to get all propertys of objects
+//how to referece name from the object in function
+//when we have to reference the same object we will use 'this' keyword and use dot with it to get[access] all propertys of objects
 JsUser.greetingsTwo = function() {
     console.log(`hello JS users,  ${this.name} here`);
 }
