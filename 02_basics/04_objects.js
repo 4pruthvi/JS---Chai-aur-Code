@@ -65,3 +65,30 @@ console.log(Object.entries(tinderUser));
 
 //we can also ask objects that if it has particular value or not
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+//De-structuring
+
+const courese = {
+    coursename: 'js in hindi',
+    price: '999',
+    courseInstructor: 'hitesh'
+}
+
+// courese.courseInstructor
+
+//another way to access onject elements
+const {courseInstructor} = courese
+console.log(courseInstructor);
+
+//OR [we can change also change the name of elements in object and access it]
+
+const {courseInstructor: insturctor} = courese
+console.log(insturctor);
+
+//jason [belown]
+
+{
+    "name": "pruthvi",
+    "courseName": "it",
+    "price": "free"
+}
