@@ -87,8 +87,8 @@ console.log(insturctor);
 
 //jason [belown]
 
-{
-    "name": "pruthvi",
-    "courseName": "it",
-    "price": "free"
-}
+// {
+//     "name": "pruthvi",
+//     "courseName": "it",
+//     "price": "free"
+// }
