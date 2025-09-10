@@ -24,6 +24,7 @@ brothers.forEach( (values,index,arr) => {
 })
 
 // Using for each on array containing objects for iteration and accessing
+//to iterate over an array having multiple objects using for each loop
 
 const myCoding = [
     {
@@ -43,7 +44,7 @@ const myCoding = [
         languageFileName: 'py'
     },
 ]
-
+//Here, item refers to each objects in the array
 myCoding.forEach( (items) => {
     console.log(items.languageName);
 })
