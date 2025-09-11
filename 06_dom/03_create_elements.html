@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body style="background-color: blueviolet; color: black;">
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = 'main'
+    div.id = Math.round(Math.random()* 10 + 1)
+    div.setAttribute("title","generated title")  //title is (key) and generated title is (value)   //setAttribute directly set the value
+    div.style.backgroundColor = "yellow"
+    div.style.padding = "12px"
+    div.style.borderRadius = "12px"
+    ///innerHTML will first bring a reference to the values and then overwrite the values
+   // div.innerText = '<h2>i will become successful in my life and i will make my parents pround</h2>'
+    const addText = document.createTextNode("i will become successful in my life and i will make my parents pround")
+    div.append(addText)
+
+    document.body.append(div)
+</script>
+</html>
