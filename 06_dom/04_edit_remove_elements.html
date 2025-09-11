@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM , Chai aur Code</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <ul class="language">
+        <li>
+            javascript
+        </li>
+    </ul>
+    
+</body>
+<script>
+    const addLanguage = function (languageName) {
+        const li = document.createElement('li')  //Creates a new <li> element
+        li.innerHTML = `${languageName}`  //ills that <li> with text passed in the function argument.
+        document.querySelector('.language').appendChild(li) //Finds the first element in the page that has the class language. Takes the <li> you created and puts it inside the <ul class="language">.
+    }
+    addLanguage('c++')
+    addLanguage("Python")
+    addLanguage("TypeScript")
+
+    //Optimied way of above function
+    const addOptimizedLanguage = function(languageName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(languageName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptimizedLanguage('java')
+
+    //Edit [replacing second lang c++ with kotlin]
+    const secondLanguage = document.querySelector('li:nth-child(2)')
+    //secondLanguage.innerHTML = 'kotlin'
+    const newLang = document.createElement('li')
+    newLang.textContent = ('kotlin')
+    secondLanguage.replaceWith(newLang)
+
+    //Edit
+    const firstLanguage = document.querySelector('li:nth-child(1)') //or 'li:first-child'
+    //firstLanguage.innerHTML = 'React'
+    //firstLanguage.outerHTML = '<li>React</li>'
+    const newFirstLang = document.createElement('li')
+    newFirstLang.textContent = 'React'
+    firstLanguage.replaceWith(newFirstLang)
+
+    //remove
+    const lastLanguage = document.querySelector('li:last-child')
+    lastLanguage.remove()
+</script>
+</html>
