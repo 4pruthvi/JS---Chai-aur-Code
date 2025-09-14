@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li>
+                <img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="" />
+            </li>
+            <li>
+                <img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="" />
+            </li>
+            <li>
+                <img width="200px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="" />
+            </li>
+            <li>
+                <img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="" />
+            </li>
+            <li>
+                <img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="" />
+            </li>
+            <li>
+                <a style="color: rgb(1, 137, 255)" href="https://google.com" id="google">Google</a>
+            </li>
+        </ul>
+    </div>    
+</body>
+
+
+<script>
+    // don't use this approach as onclick provides less features, instead use event listeners
+
+    //document.querySelector('#owl').onclick = function() {
+    //    alert('owl')
+    //}
+
+    //attachEvent() : used to register an event handler function for a specified event on an object. It was primarily used in older versions of Internet Explorer (IE) to handle events.
+    //jQuery - on() : used to attach one or more event handlers for the selected elements.
+
+    //Types of Events ---> (Explaination below)
+    //type, timestamp, defaultPrevented
+    //target, toElement, srcElement, currentTarget,
+    //clientX, clientY, screenX, screenY
+    //altkey, ctrlkey, shiftkey, keyCode
+
+//******************************************************************
+    // Event propogation : False[event bubbling occurs] 
+    //                     True[event captcuring occurs]
+
+    //Capturing Phase (Event Capturing / Trickling)  TRUE
+    //The event starts from the top (root: document) and travels down to the target element.
+
+/*  document.getElementById('images').addEventListener('click',function(e) {
+        alert('image clicked again')
+    },true)
+
+    document.getElementById('owl').addEventListener('click',function(e) {
+        alert('owl clicked again')
+    },true)   */
+
+//****************************************************************************
+
+    //Bubbling Phase (Event Bubbling) FALSE
+    //After reaching the target element, the event travels back up to the root.
+
+/*    document.getElementById('images').addEventListener('click',function(e) {
+        alert('images clicked again')
+    },false)
+
+    document.getElementById('owl').addEventListener('click',function(e) {
+        alert('owl clicked again')
+        e.stopPropagation()   //stops here only not goes to the top
+    },false)
+
+    //HOW TO STOP DEFAULT BEHAVIOUR
+    document.getElementById('google').addEventListener('click',function(e) {
+        e.preventDefault()  //stops the default behavor of the google
+        e.stopPropagation()  //stops the propagation of the avbove image element alert
+        console.log('clicked google');
+    },false)  */
+
+    //goal: When we click on the image it should be removed
+    document.querySelector('#images').addEventListener('click',function(e) {
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode //gives list <li>
+            //removeIt.remove()
+            removeIt.parentNode.removeChild(removeIt) //Gives <ul> and emove its child <li>
+        }
+    },false)
+</script>
+</html>
+
+<!-- /*
+
+
+1. **Type**: This refers to the type of event that has occurred, such as 'click', 'mouseover', 'keydown', etc. It specifies the nature of the interaction that triggered the event.
+
+2. **Timestamp**: The timestamp indicates the time at which the event occurred. It provides information about when the event was triggered, allowing for time-based event handling.
+
+3. **defaultPrevented**: This property indicates whether the default action of the event has been prevented by calling `event.preventDefault()`. It is a boolean value that can be used to check if the default behavior should be overridden.
+
+4. **Target**: The target property of the event object refers to the element on which the event was originally triggered. It represents the specific DOM element that the event is associated with.
+
+5. **toElement**: This property is specific to certain types of events (like mouse events) and represents the element the mouse pointer is moving to when leaving the current element.
+
+6. **srcElement**: Similar to `toElement`, `srcElement` represents the element that triggered the event or the element that the event was dispatched to.
+
+7. **currentTarget**: The `currentTarget` property refers to the element that the event listener is attached to. It can be useful when dealing with event delegation or capturing/bubbling phases.
+
+8. **clientX, clientY**: These properties provide the horizontal and vertical coordinates of the mouse pointer relative to the browser window when the event occurred. They are often used in mouse-related events.
+
+9. **screenX, screenY**: Similar to `clientX` and `clientY`, `screenX` and `screenY` provide the horizontal and vertical coordinates of the mouse pointer relative to the screen or monitor.
+
+10. **altKey, ctrlKey, shiftKey**: These properties indicate whether the 'Alt', 'Ctrl', or 'Shift' key was pressed when the event occurred. They are boolean values that can be used to check for modifier key states.
+
+11. **keyCode**: For keyboard events, the `keyCode` property represents the numerical value of the key that was pressed. It can be used to determine which key triggered the event.
+
+
+*/ -->
