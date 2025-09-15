@@ -32,7 +32,7 @@ In a single thread, each operation waits for the last one to complete before exe
 | 1. Blocks the flow of program | 1. Does not block execution |
 | 2. Reads file Synchronously | 2. Reads file Asynchronously |
 
-![event-loop.png](event-loop.png)
+![event-loop.png](./event-loop.png)
 
 ---
 
