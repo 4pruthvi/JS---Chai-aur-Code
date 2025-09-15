@@ -33,3 +33,71 @@ In a single thread, each operation waits for the last one to complete before exe
 | 2. Reads file Synchronously | 2. Reads file Asynchronously |
 
 ![event-loop.png](event-loop.png)
+
+---
+
+# What is Async JavaScript?
+
+-Normally, JavaScript is synchronous → it runs code line by line, waiting for each task to finish before moving to the next.
+
+-But some tasks take time (like fetching data from an API, reading a file, waiting for a timer). If JS waited for them, the whole program would freeze (blocking).
+
+-👉 To solve this, we use asynchronous (async) JavaScript, which lets code run in the background without blocking the rest of the program.
+
+**🔹 Example (Synchronous vs Asynchronous)**
+1. **❌ Synchronous (blocking).**
+
+```javascript
+console.log("Start");
+
+function wait() {
+  for (let i = 0; i < 1e9; i++) {}  // heavy task
+}
+wait();
+
+console.log("End");
+
+```
+**👉 Output:**
+
+Start
+End   (after a long pause ⏳)
+
+---
+
+2. **✅ Asynchronous (non-blocking)**
+
+```javascript
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Async Task Done");
+}, 2000);
+
+console.log("End");
+```
+
+-👉 Output:
+
+Start
+End
+Async Task Done  (after 2 seconds, without blocking)
+
+---
+
+**🔹 Why do we use Async JS?**
+
+-Non-blocking → Other code keeps running while waiting for long tasks.
+
+-Better performance → Web apps remain fast & responsive.
+
+-Essential for real-world tasks like:
+
+-Fetching API data (fetch())
+
+-Handling user input
+
+-Reading/writing files (Node.js)
+
+-Timers (setTimeout, setInterval)
