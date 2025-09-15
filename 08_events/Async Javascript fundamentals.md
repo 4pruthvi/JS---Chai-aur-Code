@@ -60,8 +60,8 @@ console.log("End");
 ```
 **👉 Output:**
 
-Start
-End   (after a long pause ⏳)
+-Start
+-End   (after a long pause ⏳)
 
 ---
 
@@ -80,9 +80,9 @@ console.log("End");
 
 -👉 Output:
 
-Start
-End
-Async Task Done  (after 2 seconds, without blocking)
+-Start
+-End
+-Async Task Done  (after 2 seconds, without blocking)
 
 ---
 
