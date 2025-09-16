@@ -1,0 +1,36 @@
+body {
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+
+table,
+th,
+td {
+    border: 1px solid #e7e7e7;
+}
+
+.project {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.color {
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+}
+
+.key-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #00ffcc;
+    background: #222;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
