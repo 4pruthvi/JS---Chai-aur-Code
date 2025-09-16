@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //setTimeout is a function that allows you to execute a block of code after a specified amount of time. It's a way to delay the execution of a function or a piece of code for a certain period of time.
+    // setTimeout(function() {
+    //     console.log('pruthvi');
+    // },2000)
+
+    //another way to write
+    const sayPruthvi = function() {
+        console.log('hello pruthvi');
+    }
+
+    const changeText = function() {
+        document.querySelector('h1').innerHTML='best JS series'
+    }
+
+    setTimeout(sayPruthvi,4000)  //execute after four seconds
+    //setTimeout(changeText,6000)  //changes after five seconds
+
+    const changeMe = setTimeout(changeText,6000)
+
+    //when we click on stop button it will not change the h1 it will stop 
+    document.querySelector('#stop').addEventListener('click',function() {
+        clearTimeout(changeMe) 
+        console.log('STOPPED');
+    })
+</script>
+</html>

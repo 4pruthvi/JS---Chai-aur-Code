@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur javaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //setInterval: It is a method that calls a function at a specified interval (in milliseconds) repeatedly. It's often used to perform a task at a regular interval, such as updating a clock, animating an element, or checking for updates.
+
+    // setInterval(function() {
+    //     console.log('Pruthvi',Date.now());
+    // },2000)
+
+    //another way to using variable and function
+    const sayDate = function() {
+        console.log('pruthvi',Date.now());
+        
+    }
+    //setInterval(sayDate,2000)
+
+    //using parameter in setInterval
+    const sayDateAgain = function(str) {
+        console.log(str,Date.now());
+        
+    }
+   // setInterval(sayDate,2000,'Hello')
+
+    // Small assignment
+    const assignment = function() {
+        document.querySelector('h1').innerHTML = 'Pruthvi Sawant'
+    }
+
+    document.querySelector('#start').addEventListener('click',function(e) {
+        const stop = setInterval(assignment,3000)
+
+        document.querySelector('#stop').addEventListener('click',function(e) {
+        clearInterval(stop)
+    })
+    })
+
+    // document.querySelector('#stop').addEventListener('click',function(e) {
+    //     clearInterval(stop)
+    // })
+    
+</script>
+</html>
